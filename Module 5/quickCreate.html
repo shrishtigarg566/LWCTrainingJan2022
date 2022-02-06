@@ -1,0 +1,26 @@
+<template>
+     <!--<lightning-card title="Account Quick Create" icon-name="standard:account">
+        <lightning-record-form object-api-name="Account"  fields={fields} onsuccess={handleSuccess}>
+            <button class="slds-button slds-button_neutral">Show All Account Fields</button>
+                <div class="slds-box">
+            </div>
+          <lightning-card title="Contact Quick Create" icon-name="standard:contact">
+                <lightning-record-form object-api-name={objectApiNAme} fields={fields} onsuccess={handleSuccess}>!-->
+
+                    <lightning-card title="Opportunity Quick Create" icon-name="standard:opportunity">
+                        <lightning-record-form object-api-name={objectApiNAme} fields={fields} onsuccess={handleSuccess}>
+                        <div class="slds-box"></div>
+                        <lightning-button 
+                        variant="brand"
+                        label="Show"
+                        title="Show All Contact Fields"
+                        onclick={handleAdd}
+                        class="slds-m-left_small"
+                        disabled={disableButton}></lightning-button>
+       
+            <lightning-button label="Save" type="submit"></lightning-button>
+            <lightning-button label="Cancel" onclick={handlereset}></lightning-button>
+            </lightning-record-form>
+        </lightning-card>
+    
+</template>
