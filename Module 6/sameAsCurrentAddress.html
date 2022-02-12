@@ -1,0 +1,40 @@
+<template>
+    <lightning-card variant="Narrow" title="Address Form">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-large-size_1-of-12"></div>
+            <div class="slds-col slds-large-size_4-of-12">
+                <lightning-card variant="Narrow" title="Current Address">
+                    <div>
+                        <h1 style="color:aqua;"> </h1>
+                    </div>
+                    <lightning-input required type="text" variant="standard" label="Address Line 1" value={address1}
+                        onchange={address1Change}></lightning-input>
+                    <lightning-input required type="text" variant="standard" label="Address Line 2" value={address2}
+                        onchange={address2Change}></lightning-input>
+                    <lightning-input required type="text" variant="standard" label="Landmark" value={landmark}
+                        onchange={landmarkChange}></lightning-input>
+                    <lightning-input required type="number" variant="standard" label="Zip Code" value={zipCode}
+                        onchange={zipCodeChange}></lightning-input>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-large-size_1-of-12"></div>
+            <div class="slds-col slds-large-size_4-of-12">
+                <lightning-card variant="Narrow" title="Permanent Address">
+                    <div>
+                        <lightning-input type="checkbox" variant="standard" name="sameAsCurrent" label="Same As Current"
+                            onchange={sameAsCurrentChanged} value={sameAsCurrent}></lightning-input>
+                    </div>
+                    <lightning-input type="text" variant="standard" label="Address Line 1" value={address1P}
+                        disabled={sameAsCurrent}></lightning-input>
+                    <lightning-input type="text" variant="standard" label="Address Line 2" value={address2P}
+                        disabled={sameAsCurrent}></lightning-input>
+                    <lightning-input type="text" variant="standard" label="Landmark" value={landmarkP}
+                        disabled={sameAsCurrent}></lightning-input>
+                    <lightning-input type="number" variant="standard" label="Zip Code" value={zipCodeP}
+                        disabled={sameAsCurrent}></lightning-input>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-large-size_1-of-12"></div>
+        </div>
+    </lightning-card>
+</template>
